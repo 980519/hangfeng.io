@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css/cooperative_partner.css">
+</head>
+<body>
+	<nav>
+		<div class="navbox">
+			<img src="img/nav_3.png" alt="" class="nav-img">
+			<ul class="nav-ul1">
+				<li><a href="">首页</a></li>
+				<li><a href="">品牌故事</a></li>
+				<li><a href="">产品展示</a></li>
+				<li><a href="">新闻中心</a></li>
+				<li><a href="">招贤纳士</a></li>
+				<li><a href="">联系我们</a></li>
+			</ul>
+			<ul class="nav-ul2">
+				<li>中文</li>
+				<li>|</li>
+				<li>Engish</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="banner">
+		<div class="banner_img">
+			<ul class="banner_ul">
+				<li><img src="img/合作伙伴1.jpg" alt="" ></li>
+				<li><img src="img/合作伙伴2.jpg" alt=""></li>
+				<li><img src="img/合作伙伴3.jpg" alt=""></li>
+				<li><img src="img/合作伙伴4.jpg" alt=""></li>
+				<li><img src="img/合作伙伴1.jpg" alt="" ></li>
+			</ul>	           		
+		</div>
+		<div class="banner_con1">合作伙伴</div>
+		<div class="banner_con2">COOPERATIVE PARTNER</div>
+		<div class="banner_con3">领引非凡成就</div>
+		<div class="banner_con4">查看更多 </div>
+		<div class="banner_con5">∨</div>
+
+		<div class="square">
+			<span ></span>
+			<span></span>
+			<span></span>
+			<span style="margin-right:0px"></span>
+		</div>
+	</div>
+
+	<script>
+        $(function () {
+            var btn = $(".square span");
+            var wimg = $(".banner_ul li ").width();
+
+            $(btn[0]).addClass("current");
+
+
+            var i = setInterval(move,1000);
+            function move() {
+                var number;
+                btn.each(function () {
+                    if($(this).hasClass("current")){
+                        number = $(this).index() + 1;
+                        $(".banner_ul").animate({left: -number * wimg + "px"},500);
+
+                        if(number === btn.length){
+                            $(".banner_ul").animate({left:"0px"},0);
+                            number = 0;
+						}
+                    }
+                });
+                $(btn[number]).addClass("current").siblings().removeClass("current");
+            }
+        })
+	</script>
+</body>
+</html>

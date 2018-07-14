@@ -1,0 +1,150 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 14px;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+nav{
+	width: 1920px;
+	height: 90px;
+	background:rgba(85,90,97, 0.4);
+
+}
+.navbox{
+	width: 1200px;
+	height: 90px;
+	margin: 0 auto;
+
+}
+.nav-img{
+	margin-top: 30px;
+	float: left;
+}
+.nav-ul1{
+	margin-left: 60px;
+	float: left;
+	margin-top: 40px;
+
+}
+.nav-ul1 li{
+	height: 40px;
+	border-bottom: 1px solid transparent;
+	float: left;
+	color: white;
+	font-size: 16px;
+	margin-right: 50px;
+}
+.nav-ul2{
+	margin-top: 40px;
+	float: right;
+}
+.nav-ul2 li{
+	float: left;
+	color: white;
+	font-size: 14px;
+	margin-left: 15px;
+}
+.banner{
+	width: 1920px;
+	height: 1080px;
+	position: relative;
+	top: -90px;
+	left: 0;
+	z-index: -1;
+
+
+}
+.banner_ul{
+	width: 9600px;
+	height: 1080px;
+	position: absolute;
+	
+}
+.banner_ul>li
+{
+	width: 1920px;
+	height: 1080px;
+	float: left;
+}
+.banner_img{
+	
+	width: 1920px;
+	height: 1080px;
+	position: relative;
+}
+
+.banner_ul li img{
+	width: 100%;
+	height:100%;
+}
+.banner_con1{
+	position: absolute;
+	color: white;
+	font-size: 50px;
+	left: 872px;
+	top: 410px;
+	z-index: 1;
+
+}
+.banner_con2{
+	position: absolute;
+	color: white;
+	font-size: 30px;
+	left: 770px;
+	top: 490px;
+	z-index: 1;
+	letter-spacing: 3px;
+}
+.banner_con3{
+	position: absolute;
+	color: white;
+	font-size: 26px;
+	left: 890px;
+	top: 580px;
+	z-index: 1;
+}
+.banner_con4{
+	position: absolute;
+	color: white;
+	font-size: 16px;
+	left: 900px;
+	top: 710px;
+	width: 126px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	border: 1px solid #ffffff;
+}
+.banner_con5{
+	position: absolute;
+	color: white;
+	font-size: 50px;
+	left: 924px;
+	top: 780px;
+	width: 70px;
+	height: 40px;
+	text-align: center;
+	line-height: 50px;
+}
+
+.square{
+	position: absolute;
+	z-index: 99;
+	left: 772px;
+	top: 1006px;
+}
+.square>span{
+	display: inline-block;
+	width: 88px;
+	height: 6px;
+	margin-right: 10px;
+	background:rgba(46,57,68,0.9);
+
+}
+.square>span.current{
+	background: white;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="background">
+			<div class="banner"> 
+				<div class="background_img">
+					<img src="img/首页.png" alt="" style="z-index:2;">
+					<img src="img/banner1.352f2dd.jpg" alt="">
+					<img src="img/banner3.4020793.jpg" alt="">
+					<img src="img/banner2.e07a93e.jpg" alt="" style="z-index: -2;">
+				</div>
+			 </div> 
+			
+		<div class="navbox">
+			<nav>
+				<img src="img/nav_3.png" alt="" class="nav-img">
+					<ul class="nav-ul1">
+						<li><a href="index.html">首页</a></li>
+						<li><a href="brand_story.html">品牌故事</a></li>
+						<li><a href="product.html">产品展示</a></li>
+						<li><a href="news.html">新闻中心</a></li>
+						<li><a href="join_us.html">招贤纳士</a></li>
+						<li><a href="contact_us.html">联系我们</a></li>
+					</ul>			
+				<ul class="nav-ul2">
+					<li>中文</li>
+					<li>|</li>
+					<li>English</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="con1">航丰</div>
+		<div class="con2">航空纺织领导者</div>
+		<div class="con3">了解更多 ></div>
+		<div class="bottom">
+			<span style="background-color:white;"></span>
+			<span></span>
+			<span></span>
+			<span style="margin-right:0px"></span>
+		</div>
+	</div>
+
+	<script>
+        $(function () {
+            var i=0;
+            var j=setInterval(move,2000);
+            function  move() {
+                i++;
+                if (i>3) {
+                    i = 0;
+                }
+                $(".bottom span").eq(i).css({'background-color': 'white'}).siblings().css({'background': '#c3c3bc'});
+                $(".background_img img").eq(i).fadeIn(500).siblings().fadeOut(500);
+            };
+
+            $(".bottom span").click(function () {
+                $(this).css({'background-color': 'white' }).siblings().css({'background':'#c3c3bc'})
+                var i=$(this).index();
+
+                $(".background_img img").eq(i).fadeIn(500).siblings().fadeOut(500);
+            });
+        })
+	</script>
+</body>
+</html>
